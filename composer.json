@@ -1,0 +1,26 @@
+{
+    "name": "accolon/pendragon",
+    "description": "Mini framework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joao Victor Rocha Cavalcanti",
+            "email": "jvrcavalcanti@scseduca.com.br"
+        }
+    ],
+    "require": {
+        "accolon/route": "dev-master",
+        "accolon/template": "dev-master",
+        "accolon/datalayer": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app"
+        },
+        "files": [
+            "./config/db.php",
+            "./config/helper.php",
+            "./config/routes.php"
+        ]
+    }
+}
