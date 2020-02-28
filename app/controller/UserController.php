@@ -4,7 +4,6 @@ namespace App\Controller;
 
 use Accolon\Route\Request;
 use Accolon\Route\Response;
-use Accolon\Template\Template;
 use App\User;
 
 class UserController

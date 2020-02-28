@@ -12,7 +12,7 @@
         "accolon/route": "dev-master",
         "accolon/template": "dev-master",
         "accolon/datalayer": "dev-master",
-        "accolon/token": "^1.0"
+        "accolon/token": "^1.1"
     },
     "autoload": {
         "psr-4": {

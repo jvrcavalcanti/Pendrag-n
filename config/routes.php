@@ -3,9 +3,7 @@
 use Accolon\Route\Route;
 
 Route::get("/", function() {
-    view("./pages/welcome");
-}, App\Middleware\Auth::class);
+    return view("./pages/welcome");
+});
 
 Route::get("/auth/login", "AuthController@login");
-
-// Route::get("/user", "UserController@index", App\Middleware\Auth::class);
