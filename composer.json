@@ -11,7 +11,8 @@
     "require": {
         "accolon/route": "dev-master",
         "accolon/template": "dev-master",
-        "accolon/datalayer": "dev-master"
+        "accolon/datalayer": "dev-master",
+        "accolon/token": "^1.0"
     },
     "autoload": {
         "psr-4": {
@@ -20,7 +21,8 @@
         "files": [
             "./config/db.php",
             "./config/helper.php",
-            "./config/routes.php"
+            "./config/routes.php",
+            "./config/token.php"
         ]
     }
 }
