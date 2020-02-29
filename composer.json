@@ -1,6 +1,6 @@
 {
     "name": "pendragon/framework",
-    "description": "Mini framework",
+    "description": "Micro framework",
     "license": "MIT",
     "type": "project",
     "keywords": [
