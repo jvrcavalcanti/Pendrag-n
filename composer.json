@@ -10,7 +10,8 @@
     ],
     "config": {
         "optimize-autoloader": true,
-        "sort-packages": true
+        "sort-packages": true,
+        "process-timeout": 0
     },
 
     "authors": [
@@ -37,7 +38,8 @@
         "files": [
             "./config/db.php",
             "./config/helper.php",
-            "./config/token.php"
+            "./config/token.php",
+            "./config/view.php"
         ]
     },
     "autoload-dev": {
