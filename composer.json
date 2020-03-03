@@ -54,6 +54,7 @@
         "migrate": "App\\Console\\Migration::migrate",
         "migrate:rollback": "App\\Console\\Migration::rollback",
         "migrate:refresh": "App\\Console\\Migration::refresh",
+        "make.migration": "App\\Console\\Make::migration",
         "test": "phpunit  --testdox tests"
     }
 }

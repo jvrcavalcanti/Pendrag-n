@@ -4,14 +4,16 @@ namespace App\Console;
 
 require_once "./vendor/autoload.php";
 
-use Composer\Script\Event;
-use Composer\Installer\PackageEvent;
-
 class Migration
 {
     private static $migrations = [
         \Migration\TestTable::class
     ];
+
+    public static function addMigration($class)
+    {
+        self::$migrations[] = $class;
+    }
 
     public static function migrate()
     {
