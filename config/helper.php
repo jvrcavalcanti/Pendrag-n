@@ -14,6 +14,9 @@ function path($path){
 function img($path) {
     $arr = array_reverse(explode("/", path('resources/images') . $path));
     $newPath = "images/{$arr[0]}";
+    if(is_dir("images") === false) {
+        mkdir("images");
+    }
     if(!file_exists($newPath)) {
         copy(path('resources/images') . $path, $newPath);
     }

@@ -4,6 +4,9 @@
     "license": "MIT",
     "type": "project",
     "keywords": [
+        "microframework",
+        "php",
+        "php framework",
         "framework",
         "micro-framework",
         "pendragon"

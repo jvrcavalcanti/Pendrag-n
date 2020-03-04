@@ -1,6 +1,6 @@
 <?php
 
-define("DB_CONFIG", [
+const DB_CONFIG = [
     "driver" => "mysql",
     "host" => "localhost",
     "port" => 3306,
@@ -8,4 +8,4 @@ define("DB_CONFIG", [
     "charset" => "utf8",
     "user" => "root",
     "password" => ""
-]);
+];
