@@ -6,4 +6,4 @@ Route::get("/", function() {
     return view("welcome");
 });
 
-Route::get("/auth/login", "AuthController@login");
+Route::get("/auth/login", "AuthController.login");
