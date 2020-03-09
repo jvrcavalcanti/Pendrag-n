@@ -55,10 +55,17 @@
     "prefer-stable": true,
     "scripts": {
         "serve": "php -S localhost:8000 -t public",
+
         "migrate": "App\\Console\\Migration::migrate",
         "migrate.rollback": "App\\Console\\Migration::rollback",
         "migrate.refresh": "App\\Console\\Migration::refresh",
+
         "make.migration": "App\\Console\\Make::migration",
+        "make.model": "App\\Console\\Make::model",
+        "make.controller": "App\\Console\\Make::controller",
+        "make.middleware": "App\\Console\\Make::middleware",
+        "make.component": "App\\Console\\Make::component",
+
         "test": "phpunit  --testdox tests"
     }
 }

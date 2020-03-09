@@ -14,8 +14,67 @@ class Make
         $template = file_get_contents("app/console/templates/migration.template.php");
         $args = $event->getArguments();
         $f = fopen("./migration/" . $args[0] . ".php", "w");
+
         $template = str_replace("className", $args[0], $template);
         $template = str_replace("%name%", strtolower(explode("Table", $args[0])[0]), $template);
+
         fwrite($f, $template);
+    }
+
+    public static function model(Event $event)
+    {
+        $template = file_get_contents("app/console/templates/model.template.php");
+        $args = $event->getArguments();
+        $f = fopen("./app/model/" . $args[0] . ".php", "w");
+
+        $template = str_replace("className", $args[0], $template);
+        $template = str_replace("%name%", strtolower($args[0]) . "s", $template);
+
+        fwrite($f, $template);
+    }
+
+    public static function controller(Event $event)
+    {
+        $template = file_get_contents("app/console/templates/controller.template.php");
+        $args = $event->getArguments();
+        $f = fopen("./app/controller/" . $args[0] . ".php", "w");
+
+        $template = str_replace("className", $args[0], $template);
+
+        fwrite($f, $template);
+    }
+
+    public static function middleware(Event $event)
+    {
+        $template = file_get_contents("app/console/templates/middleware.template.php");
+        $args = $event->getArguments();
+        $f = fopen("./app/middleware/" . $args[0] . ".php", "w");
+
+        $template = str_replace("className", $args[0], $template);
+
+        fwrite($f, $template);
+    }
+
+    public static function component(Event $event)
+    {
+        $template = file_get_contents("app/console/templates/component.template.php");
+        $args = $event->getArguments();
+
+        $f = fopen("./app/components/" . $args[0] . ".php", "w");
+
+        $template = str_replace("className", $args[0], $template);
+
+        fwrite($f, $template);
+
+        mkdir("resources/components/" . $args[0]);
+        $index = fopen("resources/components/" . $args[0] . "/index.php", "w");
+        $style = fopen("resources/components/" . $args[0] . "/style.css", "w");
+        $main = fopen("resources/components/" . $args[0] . "/main.js", "w");
+
+        $template = <<<'TEXT'
+        <?php $props = $component->attributes(); ?>
+        TEXT;
+
+        fwrite($index, $template);
     }
 }
