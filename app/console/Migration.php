@@ -6,9 +6,7 @@ require_once "./vendor/autoload.php";
 
 class Migration
 {
-    private static $migrations = [
-        \Migration\TestTable::class
-    ];
+    private static $migrations = MIGRATIONS;
 
     public static function addMigration($class)
     {

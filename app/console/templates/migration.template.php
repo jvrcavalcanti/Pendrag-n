@@ -6,9 +6,9 @@ use Accolon\Migration\Migration;
 use Accolon\Migration\Schema;
 use Accolon\Migration\Blueprint;
 
-class TestTable implements Migration
+class className implements Migration
 {
-    private string $table = "test";
+    private string $table = "%name%";
     
     public function up(): bool
     {

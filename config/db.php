@@ -7,5 +7,5 @@ const DB_CONFIG = [
     "name" => "tavolaredonda",
     "charset" => "utf8",
     "user" => "root",
-    "password" => ""
+    "password" => "root"
 ];
