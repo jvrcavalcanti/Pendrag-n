@@ -54,27 +54,4 @@ class Make
 
         fwrite($f, $template);
     }
-
-    public static function component(Event $event)
-    {
-        $template = file_get_contents("app/console/templates/component.template.php");
-        $args = $event->getArguments();
-
-        $f = fopen("./app/components/" . $args[0] . ".php", "w");
-
-        $template = str_replace("className", $args[0], $template);
-
-        fwrite($f, $template);
-
-        mkdir("resources/components/" . $args[0]);
-        $index = fopen("resources/components/" . $args[0] . "/index.php", "w");
-        $style = fopen("resources/components/" . $args[0] . "/style.css", "w");
-        $main = fopen("resources/components/" . $args[0] . "/main.js", "w");
-
-        $template = <<<'TEXT'
-        <?php $props = $component->attributes(); ?>
-        TEXT;
-
-        fwrite($index, $template);
-    }
 }

@@ -27,7 +27,7 @@
         "accolon/datalayer": "^2.0",
         "accolon/migration": "^1.0",
         "accolon/route": "^2.0.0",
-        "accolon/template": "^2.0",
+        "accolon/template": "^2.0.1",
         "accolon/token": "^1.1.0"
     },
     "require-dev": {
@@ -64,7 +64,6 @@
         "make.model": "App\\Console\\Make::model",
         "make.controller": "App\\Console\\Make::controller",
         "make.middleware": "App\\Console\\Make::middleware",
-        "make.component": "App\\Console\\Make::component",
 
         "test": "phpunit  --testdox tests"
     }

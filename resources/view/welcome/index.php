@@ -1,9 +1,5 @@
 <main class="card-body container-fluid">
-    <?php
-    $textMove = $this->getComponent("textMove");
-    $textMove->setText("Welcome the Pendragón Framework");
-    $textMove->render();
-    ?>
+    <h1>Welcome the Pendragón Framework</h1>
     <hr/>
     <div class="d-inline">
         <a class="ml-3 mr-3" href="https://github.com/jvrcavalcanti" target="blank">

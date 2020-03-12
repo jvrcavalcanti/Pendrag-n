@@ -41,7 +41,6 @@ function view($path, $title = "Pendragon") {
 
     $tcp->css(path("resources/view") . $path .  "/style.css")
         ->js(path("resources/view") . $path .  "/main.js")
-        ->components(VIEW['components'])
         ->title($title)
         ->fecth();
 }
