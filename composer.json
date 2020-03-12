@@ -65,6 +65,8 @@
         "make.controller": "App\\Console\\Make::controller",
         "make.middleware": "App\\Console\\Make::middleware",
 
+        "clear.images": "App\\Console\\Clear::images",
+
         "test": "phpunit  --testdox tests"
     }
 }

@@ -7,6 +7,15 @@ function dd($var) {
     die();
 }
 
+function deldir($dir) {
+    $files = array_diff(scandir($dir), array('.','..'));
+        
+    foreach ($files as $file) {
+        (is_dir("$dir/$file")) ? deldir("$dir/$file") : unlink("$dir/$file");
+    }
+    rmdir($dir);
+}
+
 function path($path){
     return "../" . $path . "/";
 }
