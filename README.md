@@ -2,6 +2,12 @@
 
 Lincense MIT
 
+## Create Project
+
+```bash
+composer create-project pendragon/framework {directory}
+```
+
 ## Start
 
 ```bash
@@ -42,21 +48,21 @@ composer test
 
 ### Make Migration
 ```bash
-composer make.migration TestTable
+composer make.migration {name}
 ```
 
 ### Make Model
 ```bash
-composer make.model User
+composer make.model {name}
 ```
 
 ### Make Controller
 ```bash
-composer make.controller UserController
+composer make.controller {name}
 ```
 
 ### Make Middleware
 ```bash
-composer make.middleware Auth
+composer make.middleware {name}
 ```
 
