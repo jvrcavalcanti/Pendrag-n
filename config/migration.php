@@ -1,5 +1,5 @@
 <?php
 
-const MIGRATIONS = [
-    \Migration\TestTable::class,
-];
+$json = json_decode(file_get_contents("./config/migrations.json"));
+
+define("MIGRATIONS", $json);

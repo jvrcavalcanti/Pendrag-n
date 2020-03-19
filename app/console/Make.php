@@ -16,9 +16,13 @@ class Make
         $f = fopen("./migration/" . $args[0] . ".php", "w");
 
         $template = str_replace("className", $args[0], $template);
-        $template = str_replace("%name%", strtolower(explode("Table", $args[0])[0]), $template);
+        $template = str_replace("%name%", strtolower(explode("Table", $args[0])[0]) . "s", $template);
 
         fwrite($f, $template);
+
+        $json = json_decode(file_get_contents("./config/migrations.json"));
+        $json[] = "\\Migration\\" . $args[0];
+        file_put_contents("./config/migrations.json", json_encode($json));
     }
 
     public static function model(Event $event)
@@ -53,5 +57,15 @@ class Make
         $template = str_replace("className", $args[0], $template);
 
         fwrite($f, $template);
+    }
+
+    public static function view(Event $event)
+    {
+        $args = $event->getArguments();
+        mkdir("./resources/view/" . $args[0]);
+
+        fopen("./resources/view/" . $args[0] . "/index.php", "w");
+        fopen("./resources/view/" . $args[0] . "/main.js", "w");
+        fopen("./resources/view/" . $args[0] . "/style.css", "w");
     }
 }
