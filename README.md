@@ -66,3 +66,8 @@ composer make.controller {name}
 composer make.middleware {name}
 ```
 
+### Make View
+```bash
+composer make.view {name}
+```
+

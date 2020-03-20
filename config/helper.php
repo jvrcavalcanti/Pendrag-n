@@ -7,6 +7,12 @@ function dd($var) {
     die();
 }
 
+function component($name, $options = []) {
+    $name = "\\App\\Components\\{$name}";
+    $component = new $name($options);
+    $component->render("../resources/components");
+}
+
 function deldir($dir) {
     $files = array_diff(scandir($dir), array('.','..'));
         

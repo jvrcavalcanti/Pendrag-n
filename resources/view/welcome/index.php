@@ -8,4 +8,5 @@
     </div>
     <br/>
     <a class="nav-link" href="https://github.com/jvrcavalcanti/Pendragon" target="blank" >Github</a>
+    <!-- <?php component("Alert", ["type" => "danger", "children" => "Test"]); ?> -->
 </main>

@@ -26,9 +26,9 @@
     "require": {
         "accolon/datalayer": "^2.0",
         "accolon/migration": "^1.0",
-        "accolon/route": "^2.0.0",
-        "accolon/template": "^2.0.1",
-        "accolon/token": "^1.1.0"
+        "accolon/route": "^2.0",
+        "accolon/template": "^3.0",
+        "accolon/token": "^1.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^9"
