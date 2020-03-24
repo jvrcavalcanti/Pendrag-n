@@ -4,7 +4,7 @@ namespace App\Components;
 
 use Accolon\Template\Component;
 
-class Alert extends Component
+class Header extends Component
 {
-    protected string $dir = "alert";
+    protected string $dir = "header";
 }

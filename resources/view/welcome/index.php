@@ -1,3 +1,4 @@
+<!-- <?php component("Header"); ?> -->
 <main class="card-body container-fluid">
     <h1>Welcome the Pendragón Framework</h1>
     <hr/>
@@ -8,5 +9,4 @@
     </div>
     <br/>
     <a class="nav-link" href="https://github.com/jvrcavalcanti/Pendragon" target="blank" >Github</a>
-    <!-- <?php component("Alert", ["type" => "danger", "children" => "Test"]); ?> -->
 </main>

@@ -68,4 +68,25 @@ class Make
         fopen("./resources/view/" . $args[0] . "/main.js", "w");
         fopen("./resources/view/" . $args[0] . "/style.css", "w");
     }
+
+    public static function component(Event $event)
+    {
+        $args = $event->getArguments();
+        $name = $args[0];
+
+        $template = file_get_contents("app/console/templates/component.template.php");
+        $template = str_replace("className", $name, $template);
+        $template = str_replace("%name%", strtolower($name), $template);
+
+        $f = fopen("./app/components/" . $name . ".php", "w");
+        fwrite($f, $template);
+
+        $path = "./resources/components/" . strtolower($name);
+
+        mkdir($path);
+
+        fopen($path . "/index.php", "w");
+        fopen($path . "/style.css", "w");
+        fopen($path . "/main.js", "w");
+    }
 }
