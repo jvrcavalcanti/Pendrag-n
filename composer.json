@@ -28,7 +28,8 @@
         "accolon/migration": "^1.1",
         "accolon/route": "^2.0",
         "accolon/template": "^3.0",
-        "accolon/token": "^1.1"
+        "accolon/token": "^1.1",
+        "php": "^7.4"
     },
     "require-dev": {
         "phpunit/phpunit": "^9"
