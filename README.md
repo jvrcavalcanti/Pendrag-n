@@ -1,80 +1,78 @@
-<center>
-    # Micro Framework MVC PHP
+# Micro Framework MVC PHP
 
-    Lincense MIT
+Lincense MIT
 
-    ## Create Project
+## Create Project
 
-    ```bash
-    composer create-project pendragon/framework {directory}
-    ```
+```bash
+composer create-project pendragon/framework {directory}
+```
 
-    ## Start
+## Start
 
-    ```bash
-    composer install
-    ```
+```bash
+composer install
+```
 
-    ## Scripts
+## Scripts
 
-    ### Serve
-    ```bash
-    composer serve
-    ```
+### Serve
+```bash
+composer serve
+```
 
-    ### Migrate
-    ```bash
-    composer migrate
-    ```
+### Migrate
+```bash
+composer migrate
+```
 
-    ### Migrate Rollback
-    ```bash
-    composer migrate.rollback
-    ```
+### Migrate Rollback
+```bash
+composer migrate.rollback
+```
 
-    ### Migrate Refresh
-    ```bash
-    composer migrate.refresh
-    ```
+### Migrate Refresh
+```bash
+composer migrate.refresh
+```
 
-    ### Clear Images
-    ```bash
-    composer clear.images
-    ```
+### Clear Images
+```bash
+composer clear.images
+```
 
-    ### Tests
-    ```bash
-    composer test
-    ```
+### Tests
+```bash
+composer test
+```
 
-    ### Make Migration
-    ```bash
-    composer make.migration {name}
-    ```
+### Make Migration
+```bash
+composer make.migration {name}
+```
 
-    ### Make Model
-    ```bash
-    composer make.model {name}
-    ```
+### Make Model
+```bash
+composer make.model {name}
+```
 
-    ### Make Controller
-    ```bash
-    composer make.controller {name}
-    ```
+### Make Controller
+```bash
+composer make.controller {name}
+```
 
-    ### Make Middleware
-    ```bash
-    composer make.middleware {name}
-    ```
+### Make Middleware
+```bash
+composer make.middleware {name}
+```
 
-    ### Make View
-    ```bash
-    composer make.view {name}
-    ```
+### Make View
+```bash
+composer make.view {name}
+```
 
-    ### Make Component
-    ```bash
-    composer make.component {name}
-    ```
+### Make Component
+```bash
+composer make.component {name}
+```
 
-</center>
