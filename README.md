@@ -71,3 +71,8 @@ composer make.middleware {name}
 composer make.view {name}
 ```
 
+### Make Component
+```bash
+composer make.component {name}
+```
+
