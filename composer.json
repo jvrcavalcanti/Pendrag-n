@@ -69,6 +69,6 @@
 
         "clear.images": "App\\Console\\Clear::images",
 
-        "test": "./vendor/bin/phpunit  --testdox tests"
+        "test": "phpunit  --testdox tests"
     }
 }
