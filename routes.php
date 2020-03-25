@@ -1,7 +1,7 @@
 <?php
 
-use Accolon\Route\Route;
+$app = new \Accolon\Route\Route;
 
-Route::get("/", fn() => view("welcome"));
+$app->get("/", fn() => view("welcome"));
 
-Route::get("/auth/login", "AuthController.login");
+$app->get("/auth/login", "AuthController.login");

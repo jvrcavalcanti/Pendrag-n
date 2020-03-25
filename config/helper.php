@@ -39,7 +39,7 @@ function img($path) {
 }
 
 
-function view($path, $title = "Pendragon") {
+function view($path, $data = []) {
     $tcp = new Template(path("resources/view") . $path . "/index.php");
 
     foreach(VIEW["preset"] as $preset) {
@@ -56,6 +56,7 @@ function view($path, $title = "Pendragon") {
 
     $tcp->css(path("resources/view") . $path .  "/style.css")
         ->js(path("resources/view") . $path .  "/main.js")
-        ->title($title)
-        ->fecth();
+        ->title(VIEW["title"])
+        ->lang(VIEW["lang"])
+        ->fecth($data);
 }

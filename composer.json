@@ -26,7 +26,7 @@
     "require": {
         "accolon/datalayer": "^2.0",
         "accolon/migration": "^1.1",
-        "accolon/route": "^2.0",
+        "accolon/route": "^3.0",
         "accolon/template": "^3.0",
         "accolon/token": "^1.1",
         "php": "^7.4"
