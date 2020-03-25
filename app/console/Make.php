@@ -19,10 +19,6 @@ class Make
         $template = str_replace("%name%", strtolower(explode("Table", $args[0])[0]) . "s", $template);
 
         fwrite($f, $template);
-
-        $json = json_decode(file_get_contents("./config/migrations.json"));
-        $json[] = "\\Migration\\" . $args[0];
-        file_put_contents("./config/migrations.json", json_encode($json));
     }
 
     public static function model(Event $event)

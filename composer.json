@@ -36,15 +36,14 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/",
-            "Migration\\": "migration/"
+            "App\\": "app/"
         },
         "files": [
             "./config/db.php",
             "./config/helper.php",
             "./config/token.php",
             "./config/view.php",
-            "./config/migration.php"
+            "./config/util.php"
         ]
     },
     "autoload-dev": {

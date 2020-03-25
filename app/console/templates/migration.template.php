@@ -1,7 +1,5 @@
 <?php
 
-namespace Migration;
-
 use Accolon\Migration\Migration;
 use Accolon\Migration\Schema;
 use Accolon\Migration\Blueprint;

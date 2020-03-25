@@ -4,9 +4,9 @@ use Accolon\Migration\Migration;
 use Accolon\Migration\Schema;
 use Accolon\Migration\Blueprint;
 
-class TestTable implements Migration
+class UserTable implements Migration
 {
-    private string $table = "test";
+    private string $table = "users";
     
     public function up(): bool
     {

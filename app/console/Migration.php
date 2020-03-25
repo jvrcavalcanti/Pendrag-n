@@ -6,39 +6,41 @@ require_once "./vendor/autoload.php";
 
 class Migration
 {
-    private static $migrations = MIGRATIONS;
-
-    public static function addMigration($class)
-    {
-        self::$migrations[] = $class;
-    }
-
     public static function migrate()
     {
-        foreach(self::$migrations as $migration) {
-            $table = new $migration;
+        $migrations = filesdir("./migration");
+        foreach($migrations as $migration) {
+            $name = explode(".", $migration)[0];
+            require_once "./migration/" . $migration;
+            $table = new $name;
             $table->up();
-            echo "Up: {$migration}\n";
+            echo "Up: {$name}\n";
         }
     }
 
     public static function rollback()
     {
-        foreach(self::$migrations as $migration) {
-            $table = new $migration;
+        $migrations = filesdir("./migration");
+        foreach($migrations as $migration) {
+            $name = explode(".", $migration)[0];
+            require_once "./migration/" . $migration;
+            $table = new $name;
             $table->down();
-            echo "Down: {$migration}\n";
+            echo "Down: {$name}\n";
         }
     }
 
     public static function refresh()
     {
-        foreach(self::$migrations as $migration) {
-            $table = new $migration;
+        $migrations = filesdir("./migration");
+        foreach($migrations as $migration) {
+            $name = explode(".", $migration)[0];
+            require_once "./migration/" . $migration;
+            $table = new $name;
             $table->down();
-            echo "Down: {$migration}\n";
+            echo "Down: {$name}\n";
             $table->up();
-            echo "Up: {$migration}\n";
+            echo "Up: {$name}\n";
         }
     }
 }
