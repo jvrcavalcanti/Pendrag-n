@@ -1,6 +1,6 @@
 <?php
 
-function deldir($dir) {
+function deldir(string $dir): void {
     $files = array_diff(scandir($dir), array('.','..'));
         
     foreach ($files as $file) {
@@ -9,7 +9,7 @@ function deldir($dir) {
     rmdir($dir);
 }
 
-function filesdir($path) {
+function filesdir(string $path): array {
     $d = dir($path);
     $files = [];
     while(false !== ($entry = $d->read())) {
@@ -18,4 +18,12 @@ function filesdir($path) {
         }
     }
     return $files;
+}
+
+function cleantext(string $text): string {
+    return trim(preg_replace("/\s+/", " ", $text));
+}
+
+function trimm($text) {
+    return preg_replace("/ /", "", $text);
 }

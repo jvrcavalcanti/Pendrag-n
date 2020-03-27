@@ -2,7 +2,7 @@
 
 const VIEW = [
     "preset" => [],
-    "js" => ["../resources/js/jquery-3.3.1.slim.min.js"],
+    "js" => ["../resources/js/cookie.js"],
     "css" => ["../resources/css/bootstrap.min.css"],
     "title" => "Pendragon",
     "lang" => "en"
