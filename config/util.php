@@ -12,8 +12,8 @@ function deldir(string $dir): void {
 function filesdir(string $path): array {
     $d = dir($path);
     $files = [];
-    while(false !== ($entry = $d->read())) {
-        if($entry != "." and $entry != "..") {
+    while (false !== ($entry = $d->read())) {
+        if ($entry != "." and $entry != "..") {
             $files[] = $entry;
         }
     }

@@ -6,15 +6,24 @@ use Accolon\Route\Middleware;
 use Accolon\Route\Request;
 use Accolon\Route\Response;
 use Accolon\Token\Token;
+use Closure;
 
-class Auth implements Middleware
+class Auth extends Middleware
 {
-    public function handle(Request $request, Response $response): bool
+    public function handle (Request $request, Response $response, Closure $next): ?string
     {
-        if(!$request->get("token")) {
-            return false;
+        if(!$request->get("token") || !Token::verify($request->get("token"))) {
+            return $response->text("Access invalid", 401);
         }
-        
-        return Token::verify($request->get("token"));
+
+        return $next($request, $response);
     }
+    // public function handle(Request $request, Response $response): bool
+    // {
+    //     if(!$request->get("token")) {
+    //         return false;
+    //     }
+        
+    //     return Token::verify($request->get("token"));
+    // }
 }

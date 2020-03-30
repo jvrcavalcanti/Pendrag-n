@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console;
+namespace Console;
 
 require_once "./vendor/autoload.php";
 

@@ -10,8 +10,8 @@ class AuthController
 {
     public function login(Request $request, Response $response)
     {
-        return $response->json([
+        return [
             "token" => Token::make([$request->get("user"), $request->get("password")])
-        ]);
+        ];
     }
 }

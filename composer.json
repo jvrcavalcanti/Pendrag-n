@@ -26,7 +26,7 @@
     "require": {
         "accolon/datalayer": "^2.0",
         "accolon/migration": "^2.0",
-        "accolon/route": "^3.0",
+        "accolon/route": "^3.1",
         "accolon/template": "^3.0",
         "accolon/token": "^1.1",
         "php": "^7.4"
@@ -43,12 +43,15 @@
             "./config/helper.php",
             "./config/token.php",
             "./config/view.php",
-            "./config/util.php"
+            "./config/util.php",
+            "./config/app.php",
+            "./config/route.php"
         ]
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "tests/",
+            "Console\\": "console/"
         }
     },
     "minimum-stability": "dev",
@@ -56,18 +59,18 @@
     "scripts": {
         "serve": "php -S localhost:8000 -t public",
 
-        "migrate": "App\\Console\\Migration::migrate",
-        "migrate.rollback": "App\\Console\\Migration::rollback",
-        "migrate.refresh": "App\\Console\\Migration::refresh",
+        "migrate": "Console\\Migration::migrate",
+        "migrate.rollback": "Console\\Migration::rollback",
+        "migrate.refresh": "Console\\Migration::refresh",
 
-        "make.migration": "App\\Console\\Make::migration",
-        "make.model": "App\\Console\\Make::model",
-        "make.controller": "App\\Console\\Make::controller",
-        "make.middleware": "App\\Console\\Make::middleware",
-        "make.view": "App\\Console\\Make::view",
-        "make.component": "App\\Console\\Make::component",
+        "make.migration": "Console\\Make::migration",
+        "make.model": "Console\\Make::model",
+        "make.controller": "Console\\Make::controller",
+        "make.middleware": "Console\\Make::middleware",
+        "make.view": "Console\\Make::view",
+        "make.component": "Console\\Make::component",
 
-        "clear.images": "App\\Console\\Clear::images",
+        "clear.images": "Console\\Clear::images",
 
         "test": "phpunit  --testdox tests"
     }
