@@ -27,3 +27,14 @@ function cleantext(string $text): string {
 function trimm($text) {
     return preg_replace("/ /", "", $text);
 }
+
+function badrequest(\Accolon\Route\Request $request, array $fields): bool
+{
+    foreach($fields as $field) {
+        if(!$request->get($field)) {
+            return true;
+        }
+    }
+
+    return false;
+}
