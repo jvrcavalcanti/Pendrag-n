@@ -6,6 +6,4 @@
 	RewriteCond %{REQUEST_FILENAME} !-l
 
 	RewriteRule ([a-z_\\\/\-]+)$ ./index.php?path=/$1 [QSA]
-
-	RewriteRule ([a-z]+)/([0-9]+)$ ./index.php?path=/$1&id=$2 [QSA,L]
 </IfModule>
