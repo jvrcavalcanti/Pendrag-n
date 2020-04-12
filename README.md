@@ -1,4 +1,4 @@
-# Micro Framework MVC PHP
+# Framework MVC PHP
 
 Lincense MIT
 
