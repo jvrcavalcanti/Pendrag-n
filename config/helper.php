@@ -1,5 +1,6 @@
 <?php
 
+use Accolon\Route\Response;
 use Accolon\Template\Template;
 
 function dd($var) {
@@ -27,6 +28,15 @@ function img($path) {
         copy(path('resources/images') . $path, $newPath);
     }
     return $newPath;
+}
+
+function response(): Response {
+    return new Response;
+}
+
+function redirect($path) {
+    global $app;
+    $app->redirect($path);
 }
 
 
