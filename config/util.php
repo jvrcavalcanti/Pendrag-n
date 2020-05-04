@@ -27,3 +27,8 @@ function cleantext(string $text): string {
 function trimm($text) {
     return preg_replace("/ /", "", $text);
 }
+
+function dd($var) {
+    var_dump($var);
+    die();
+}

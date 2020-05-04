@@ -3,11 +3,6 @@
 use Accolon\Route\Response;
 use Accolon\Template\Template;
 
-function dd($var) {
-    var_dump($var);
-    die();
-}
-
 function component($name, $options = []) {
     $name = "\\App\\Components\\{$name}";
     $component = new $name($options);
@@ -18,16 +13,16 @@ function path($path){
     return "../" . $path . "/";
 }
 
-function badrequest(\Accolon\Route\Request $request, array $fields): bool
-{
-    foreach($fields as $field) {
-        if(!$request->get($field)) {
-            return true;
-        }
-    }
+// function badrequest(\Accolon\Route\Request $request, array $fields): bool
+// {
+//     foreach($fields as $field) {
+//         if(!$request->get($field)) {
+//             return true;
+//         }
+//     }
 
-    return false;
-}
+//     return false;
+// }
 
 function img($path) {
     $arr = array_reverse(explode("/", path('resources/images') . $path));
