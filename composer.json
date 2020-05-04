@@ -72,6 +72,6 @@
 
         "clear.images": "Console\\Clear::images",
 
-        "test": "phpunit  --testdox tests"
+        "test": "vendor\\bin\\phpunit  --testdox tests"
     }
 }
