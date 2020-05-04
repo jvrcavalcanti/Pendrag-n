@@ -20,8 +20,8 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress --no-suggest
 
-    - name: PHPUnit (php-actions)
-      - uses: php-actions/phpunit@v1
+    # - name: PHPUnit (php-actions)
+    - uses: php-actions/phpunit@v1
     
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
