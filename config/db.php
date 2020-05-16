@@ -1,11 +1,11 @@
 <?php
 
-const DB_CONFIG = [
-    "driver" => "mysql",
-    "host" => "localhost",
-    "port" => 3306,
-    "name" => "pendragon",
-    "charset" => "utf8",
-    "user" => "root",
-    "password" => "root"
-];
+define("DB_CONFIG", [
+    "driver" => env("DB_DRIVER") ?? "mysql",
+    "host" => env("DB_HOST") ?? "localhost",
+    "port" => env("DB_PORT") ?? 3306,
+    "name" => env("DB_NAME") ?? "pendragon",
+    "charset" => env("DB_CHARSET") ?? "utf8",
+    "user" => env("DB_USER") ?? "root",
+    "password" => env("DB_PASSWORD") ?? "root"
+]);

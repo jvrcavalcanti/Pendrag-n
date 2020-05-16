@@ -2,6 +2,7 @@
 
 use Accolon\Route\Response;
 use Accolon\Template\Template;
+use Symfony\Component\Dotenv\Dotenv;
 
 function component($name, $options = []) {
     $name = "\\App\\Components\\{$name}";
@@ -43,6 +44,11 @@ function response(): Response {
 function redirect($path) {
     global $app;
     $app->redirect($path);
+}
+
+function env(string $attr): ?string {
+    (new Dotenv())->load(APP_ROOT . ".env");
+    return $_ENV[$attr];
 }
 
 

@@ -3,7 +3,7 @@
 use Accolon\Token\Token;
 
 Token::config(
-    md5("pendragon"),
+    env("KEY"),
     1,
     "md5"
 );
