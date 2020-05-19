@@ -11,7 +11,7 @@ class Make
 {
     public static function migration(Event $event)
     {
-        $template = file_get_contents("app/console/templates/migration.template.php");
+        $template = file_get_contents("console/templates/migration.template.php");
         $args = $event->getArguments();
         $f = fopen("./migration/" . $args[0] . ".php", "w");
 
@@ -23,7 +23,7 @@ class Make
 
     public static function model(Event $event)
     {
-        $template = file_get_contents("app/console/templates/model.template.php");
+        $template = file_get_contents("console/templates/model.template.php");
         $args = $event->getArguments();
         $f = fopen("./app/model/" . $args[0] . ".php", "w");
 
@@ -35,7 +35,7 @@ class Make
 
     public static function controller(Event $event)
     {
-        $template = file_get_contents("app/console/templates/controller.template.php");
+        $template = file_get_contents("console/templates/controller.template.php");
         $args = $event->getArguments();
         $f = fopen("./app/controller/" . $args[0] . ".php", "w");
 
@@ -46,7 +46,7 @@ class Make
 
     public static function middleware(Event $event)
     {
-        $template = file_get_contents("app/console/templates/middleware.template.php");
+        $template = file_get_contents("console/templates/middleware.template.php");
         $args = $event->getArguments();
         $f = fopen("./app/middleware/" . $args[0] . ".php", "w");
 
@@ -70,7 +70,7 @@ class Make
         $args = $event->getArguments();
         $name = $args[0];
 
-        $template = file_get_contents("app/console/templates/component.template.php");
+        $template = file_get_contents("console/templates/component.template.php");
         $template = str_replace("className", $name, $template);
         $template = str_replace("%name%", strtolower($name), $template);
 

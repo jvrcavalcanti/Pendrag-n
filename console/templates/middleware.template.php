@@ -7,7 +7,7 @@ use Accolon\Route\Request;
 use Accolon\Route\Response;
 use Closure;
 
-class className extends Middleware
+class className implements Middleware
 {
     public function handle(Request $request, Response $response, Closure $next): ?string
     {

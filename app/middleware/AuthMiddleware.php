@@ -7,10 +7,10 @@ use Accolon\Route\Request;
 use Accolon\Route\Response;
 use Closure;
 
-class JsonResponse extends Middleware
+class AuthMiddleware implements Middleware
 {
     public function handle(Request $request, Response $response, Closure $next): ?string
     {
-        return $response->json($next($request, $response));
+        return $next($request, $response);
     }
 }
