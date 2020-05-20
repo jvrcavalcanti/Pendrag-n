@@ -8,10 +8,15 @@ Lincense MIT
 composer create-project pendragon/framework {directory}
 ```
 
-## Start
+## Install Dependencies
 
 ```bash
 composer install
+```
+
+## Start
+```bash
+copy .env.example .env
 ```
 
 ## Scripts

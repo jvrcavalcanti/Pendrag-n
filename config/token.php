@@ -4,6 +4,6 @@ use Accolon\Token\Token;
 
 Token::config(
     env("KEY"),
-    1,
-    "md5"
+    env('TOKEN_HOURS'),
+    env("TOKEN_HASH")
 );
