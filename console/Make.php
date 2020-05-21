@@ -62,7 +62,7 @@ class Make
 
         fopen("./resources/view/" . $args[0] . "/index.php", "w");
         fopen("./resources/view/" . $args[0] . "/main.js", "w");
-        fopen("./resources/view/" . $args[0] . "/style.css", "w");
+        fopen("./resources/view/" . $args[0] . "/style." . strtolower(env("STYLE_PRESENT")), "w");
     }
 
     public static function component(Event $event)

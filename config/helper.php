@@ -67,7 +67,7 @@ function view($path, $data = []) {
         $tcp->lib("css", $css);
     }
 
-    $tcp->css(path("resources/view") . $path .  "/style.css")
+    $tcp->css(path("resources/view") . $path . "/style." . strtolower(env("STYLE_PRESENT")))
         ->js(path("resources/view") . $path .  "/main.js")
         ->title(VIEW["title"])
         ->lang(VIEW["lang"])
