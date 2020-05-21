@@ -5,7 +5,7 @@ namespace Console;
 require_once "./vendor/autoload.php";
 
 use Composer\Script\Event;
-use Composer\Installer\PackageEvent;
+use Symfony\Component\Dotenv\Dotenv;
 
 class Make
 {
@@ -84,5 +84,30 @@ class Make
         fopen($path . "/index.php", "w");
         fopen($path . "/style.css", "w");
         fopen($path . "/main.js", "w");
+    }
+
+    public static function key(Event $event)
+    {
+        $env = file_get_contents(APP_ROOT . ".env");
+        $envs = explode("\n", $env);
+        $dotenv = [];
+        foreach($envs as $content) {
+            $data = explode("=", $content);
+            if (sizeof($data) == 1) {
+                continue;
+            }
+            $dotenv[$data[0]] = $data[1];
+        }
+
+        $dotenv["KEY"] = md5(uniqid(rand(), true));
+        
+        $out = "";
+        foreach($dotenv as $key => $value) {
+            $out .= $key . "=" . $value . "\n";
+            if ($key == "DB_PASSWORD" || $key == "KEY" || $key == "TOKEN_HASH") {
+                $out .= "\n";
+            }
+        }
+        file_put_contents(APP_ROOT . ".env", $out);
     }
 }

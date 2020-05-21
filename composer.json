@@ -70,6 +70,7 @@
         "make.middleware": "Console\\Make::middleware",
         "make.view": "Console\\Make::view",
         "make.component": "Console\\Make::component",
+        "make.key": "Console\\Make::key",
 
         "clear.images": "Console\\Clear::images",
 
