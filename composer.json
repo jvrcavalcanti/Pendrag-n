@@ -41,6 +41,7 @@
             "App\\": "app/"
         },
         "files": [
+            "config/bootstrap.php",
             "config/app.php",
             "config/helper.php",
             "config/util.php",
