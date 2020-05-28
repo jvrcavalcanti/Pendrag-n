@@ -2,16 +2,19 @@
 
 namespace App\Controller;
 
-use Accolon\Route\AbstractController;
 use Accolon\Route\Request;
 use Accolon\Route\Response;
 use App\Model\User;
 
-class UserController extends AbstractController
+class UserController extends Controller
 {
+    public function __construct()
+    {
+        parent::__construct(new User());
+    }
+
     public function index(Request $request, Response $response)
     {
-        $user = new User();
-        return $response->json($user->all());
+        return $response->json($this->service->all());
     }
 }
