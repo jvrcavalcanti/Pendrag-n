@@ -15,6 +15,6 @@ class UserController extends Controller
 
     public function index(Request $request, Response $response)
     {
-        return $response->json($this->service->all());
+        return $response->send($this->service->all());
     }
 }
