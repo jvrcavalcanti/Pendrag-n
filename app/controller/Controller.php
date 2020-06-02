@@ -11,6 +11,8 @@ class Controller extends AbstractController
 
     public function __construct(?Model $model = null)
     {
-        $this->service ??= $model;
+        if ($model instanceof Model) {
+            $this->service = $model;
+        }
     }
 }
