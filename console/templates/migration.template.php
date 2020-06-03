@@ -11,7 +11,8 @@ class className implements Migration
     public function up(): bool
     {
         return Schema::create($this->table, function (Blueprint $table) {
-            $table->increments("id");
+            $table->id();
+            $table->timestamps();
         });
     }
 

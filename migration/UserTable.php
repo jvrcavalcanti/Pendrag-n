@@ -11,12 +11,11 @@ class UserTable implements Migration
     public function up(): bool
     {
         return Schema::create($this->table, function (Blueprint $table) {
-            $table->increments("id");
+            $table->id();
             $table->string("name");
-            $table->string("email", [
-                "unique" => true
-            ]);
+            $table->string("email")->unique();
             $table->string("password");
+            $table->timestamps();
         });
     }
 
