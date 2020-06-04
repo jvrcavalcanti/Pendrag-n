@@ -14,17 +14,6 @@ function path($path){
     return "../" . $path . "/";
 }
 
-// function badrequest(\Accolon\Route\Request $request, array $fields): bool
-// {
-//     foreach($fields as $field) {
-//         if(!$request->get($field)) {
-//             return true;
-//         }
-//     }
-
-//     return false;
-// }
-
 function img($path) {
     $arr = array_reverse(explode("/", path('resources/images') . $path));
     $newPath = "images/{$arr[0]}";

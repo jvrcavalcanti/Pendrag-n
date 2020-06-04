@@ -1,6 +1,6 @@
 <?php
 
-/** @var \Accolon\Route\Route $app */
+/** @var \Accolon\Route\Router $app */
 
 $app->get("/", fn() => view("welcome"));
 
