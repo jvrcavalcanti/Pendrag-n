@@ -52,7 +52,7 @@ function env(string $attr): ?string {
 }
 
 
-function view($path, $data = []) {
+function view($path, array $data = []) {
     $tcp = new Template(path("resources/view") . $path . "/index.php");
 
     foreach(VIEW["preset"] as $preset) {
@@ -67,7 +67,17 @@ function view($path, $data = []) {
         $tcp->lib("css", $css);
     }
 
-    $tcp->css(path("resources/view") . $path . "/style." . strtolower(env("STYLE_PRESENT")))
+    $css = path("resources/view") . $path . "/style.";
+
+    if (file_exists(path("resources/view") . $path . "/style." . "css")) {
+        $css .= "css";
+    }
+
+    if (file_exists(path("resources/view") . $path . "/style." . "scss")) {
+        $css .= "scss";
+    }
+
+    $tcp->css($css)
         ->js(path("resources/view") . $path .  "/main.js")
         ->title(VIEW["title"])
         ->lang(VIEW["lang"])

@@ -1,4 +1,4 @@
-# Framework MVC PHP
+# Pendragon Framework
 
 Lincense MIT
 
@@ -17,6 +17,7 @@ composer install
 ## Start
 ```bash
 copy .env.example .env
+composer make.key
 ```
 
 ## Scripts

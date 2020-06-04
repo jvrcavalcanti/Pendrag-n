@@ -28,7 +28,7 @@
         "accolon/datalayer": "^2.8",
         "accolon/migration": "^3.0",
         "accolon/route": "^3.8",
-        "accolon/template": "^3.0",
+        "accolon/template": "^3.3",
         "accolon/token": "^1.2.2",
         "pendragon/util": "^0.1.0",
         "symfony/dotenv": "5.0"
