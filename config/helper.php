@@ -5,8 +5,11 @@ use Accolon\Template\Template;
 use Symfony\Component\Dotenv\Dotenv;
 
 function component($name, $options = []) {
-    $name = "\\App\\Components\\{$name}";
-    $component = new $name($options);
+    $arr = str_split($name);
+    $arr[0] = strtoupper($arr[0]);
+    $name = implode("", $arr);
+    $fullName = "\\App\\Components\\{$name}";
+    $component = new $fullName($options);
     $component->render("../resources/components");
 }
 
