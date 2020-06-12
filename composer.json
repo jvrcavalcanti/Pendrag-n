@@ -25,8 +25,7 @@
     ],
     "require": {
         "php": "^7.4",
-        "accolon/datalayer": "^2.8",
-        "accolon/migration": "^3.0",
+        "accolon/migration": "^3.0.1",
         "accolon/route": "^4.0",
         "accolon/template": "^3.3",
         "accolon/token": "^1.2.2",
@@ -76,6 +75,6 @@
 
         "clear.images": "Console\\Clear::images",
 
-        "test": "vendor\\bin\\phpunit tests"
+        "test": "./vendor/bin/phpunit tests"
     }
 }
