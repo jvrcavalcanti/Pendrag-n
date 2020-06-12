@@ -2,7 +2,7 @@
 
 require_once "../vendor/autoload.php";
 
-$app = new \Accolon\Route\Route;
+$app = new \Accolon\Route\Router;
 
 require_once "../routes.php";
 
