@@ -25,11 +25,7 @@
     ],
     "require": {
         "php": "^7.4",
-        "accolon/migration": "^3.0.1",
-        "accolon/route": "^4.0",
-        "accolon/template": "^3.3",
-        "accolon/token": "^1.2.2",
-        "pendragon/util": "^0.1.0",
+        "pendragon/framework": "^1.0",
         "symfony/dotenv": "5.0"
     },
     "require-dev": {
