@@ -4,9 +4,9 @@ require_once "../vendor/autoload.php";
 
 $app = new \Accolon\Route\Router;
 
-require_once "../routes.php";
+$app->registerMiddlewares(MIDDLEWARES);
 
-$app->middlewares(MIDDLEWARES);
+require_once "../routes.php";
 
 $app->dispatch();
 

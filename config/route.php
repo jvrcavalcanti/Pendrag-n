@@ -1,5 +1,5 @@
 <?php
 
 define("MIDDLEWARES", [
-    \Accolon\Route\Middlewares\JsonResponse::class
+    "api.auth" => \Pendragon\Framework\Auth\AuthMiddleware::class
 ]);

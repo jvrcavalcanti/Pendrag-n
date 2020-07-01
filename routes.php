@@ -6,4 +6,4 @@ $app->get("/", fn() => view("welcome"));
 
 $app->get("/users", "UserController.index");
 
-$app->get("/register", "AuthController.register");
+$app->get("/register", "AuthController.register")->middleware("api.auth");
