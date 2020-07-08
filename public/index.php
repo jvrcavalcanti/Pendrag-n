@@ -2,11 +2,10 @@
 
 require_once "../vendor/autoload.php";
 
-$app = new \Accolon\Route\Router;
+$router = new \Accolon\Route\Router;
 
-$app->registerMiddlewares(MIDDLEWARES);
+$router->registerMiddlewares(MIDDLEWARES);
 
 require_once "../routes.php";
 
-$app->dispatch();
-
+$router->dispatch();
