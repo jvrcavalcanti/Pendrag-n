@@ -1,15 +1,17 @@
 <?php
 
-function deldir(string $dir): void {
+function deldir(string $dir): void
+{
     $files = array_diff(scandir($dir), array('.','..'));
-        
+
     foreach ($files as $file) {
         (is_dir("$dir/$file")) ? deldir("$dir/$file") : unlink("$dir/$file");
     }
     rmdir($dir);
 }
 
-function filesdir(string $path): array {
+function filesdir(string $path): array
+{
     $d = dir($path);
     $files = [];
     while (false !== ($entry = $d->read())) {
@@ -20,15 +22,27 @@ function filesdir(string $path): array {
     return $files;
 }
 
-function cleantext(string $text): string {
+function cleantext(string $text): string
+{
     return trim(preg_replace("/\s+/", " ", $text));
 }
 
-function trimm($text) {
+function trimm($text)
+{
     return preg_replace("/ /", "", $text);
 }
 
-function dd($var) {
-    var_dump($var);
+function dd($var)
+{
+    ?>
+    <style>
+        body {
+            background-color: #5289f7;
+        }
+    </style>
+    <pre>
+        <?php var_dump($var); ?>
+    </pre>
+    <?php
     die();
 }

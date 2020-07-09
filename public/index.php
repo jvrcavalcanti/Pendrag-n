@@ -2,10 +2,10 @@
 
 require_once "../vendor/autoload.php";
 
-$router = new \Accolon\Route\Router;
+$app = new \Pendragon\Framework\App;
 
-$router->registerMiddlewares(MIDDLEWARES);
+$app->registerMiddlewares(MIDDLEWARES);
 
 require_once "../routes.php";
 
-$router->dispatch();
+$app->dispatch();

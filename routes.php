@@ -1,9 +1,9 @@
 <?php
 
-/** @var \Accolon\Route\Router $router */
+/** @var \Pendragon\Framework\App $app */
 
-$router->get("/", fn() => view("welcome"));
+$app->get("/", fn() => view("welcome"));
 
-$router->get("/users", "UserController.index");
+$app->get("/users", "UserController.index");
 
-$router->get("/register", "AuthController.register")->middleware("api.auth");
+$app->post("/register", "AuthController.register");

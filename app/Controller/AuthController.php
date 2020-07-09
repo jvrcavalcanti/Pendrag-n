@@ -6,6 +6,7 @@ use Accolon\Route\Request;
 use Accolon\Route\Response;
 use Pendragon\Framework\Auth\AuthToken;
 use Pendragon\Framework\Auth\IAuth;
+use Pendragon\Framework\Validator;
 
 class AuthController extends Controller
 {
@@ -18,9 +19,14 @@ class AuthController extends Controller
 
     public function register(Request $request, Response $response)
     {
-        return $response->send($this->auth->generate([
-            "user" => md5(microtime(true)),
-            "id" => sha1(microtime(true))
+        Validator::request($request, [
+            "user" => "string",
+            "password" => "string"
+        ]);
+
+        return $response->json($this->auth->generate([
+            "user" => $request->get("user"),
+            "password" => $request->get("password")
         ]));
     }
 }
