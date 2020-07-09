@@ -9,7 +9,7 @@ class Migration
     public static function migrate()
     {
         $migrations = filesdir("./migration");
-        foreach($migrations as $migration) {
+        foreach ($migrations as $migration) {
             $name = explode(".", $migration)[0];
             require_once "./migration/" . $migration;
             $table = new $name;
@@ -21,7 +21,7 @@ class Migration
     public static function rollback()
     {
         $migrations = filesdir("./migration");
-        foreach($migrations as $migration) {
+        foreach ($migrations as $migration) {
             $name = explode(".", $migration)[0];
             require_once "./migration/" . $migration;
             $table = new $name;
@@ -33,7 +33,7 @@ class Migration
     public static function refresh()
     {
         $migrations = filesdir("./migration");
-        foreach($migrations as $migration) {
+        foreach ($migrations as $migration) {
             $name = explode(".", $migration)[0];
             require_once "./migration/" . $migration;
             $table = new $name;

@@ -34,6 +34,11 @@ function trimm($text)
 
 function dd($var)
 {
+    if (defined("STDIN")) {
+        var_dump($var);
+        die();
+    }
+
     ?>
     <style>
         body {
