@@ -38,8 +38,6 @@
         "files": [
             "config/bootstrap.php",
             "config/app.php",
-            "config/helper.php",
-            "config/util.php",
             "config/route.php",
             "config/view.php",
             "config/token.php",
