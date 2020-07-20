@@ -1,0 +1,15 @@
+<?php
+
+define("START_TIME", microtime(true));
+
+use Pendragon\Framework\Console\Cli;
+
+require_once __DIR__ . "/vendor/autoload.php";
+
+$cli = new Cli();
+
+$cli->run();
+
+echo "Runtime: " . number_format(
+    (microtime(true) - START_TIME), 4
+) . "ms\n";
