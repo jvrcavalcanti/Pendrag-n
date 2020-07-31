@@ -4,14 +4,17 @@ use Accolon\Migration\Migration;
 use Accolon\Migration\Schema;
 use Accolon\Migration\Blueprint;
 
-class className implements Migration
+class UserSchema implements Migration
 {
-    private string $table = "%name%";
+    private string $table = "users";
 
     public function up()
     {
         return Schema::create($this->table, function (Blueprint $table) {
             $table->id();
+            $table->string("name");
+            $table->string("email")->unique();
+            $table->string("password");
             $table->timestamps();
         });
     }
