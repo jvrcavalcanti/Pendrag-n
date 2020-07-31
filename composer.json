@@ -25,7 +25,7 @@
     ],
     "require": {
         "php": "^7.4",
-        "pendragon/framework": "^1.0",
+        "pendragon/framework": "^2.0",
         "symfony/dotenv": "5.0"
     },
     "require-dev": {

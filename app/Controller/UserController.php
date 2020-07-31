@@ -4,17 +4,20 @@ namespace App\Controller;
 
 use Accolon\Route\Request;
 use Accolon\Route\Response;
-use App\Model\User;
+use App\Repositories\IUserRepository;
+use App\Repositories\Izanami\UserRepositoryIzanami;
 
-class UserController extends Controller
+class UserController
 {
-    public function __construct()
+    private IUserRepository $repository;
+
+    public function __construct(IUserRepository $repository)
     {
-        parent::__construct(new User());
+        $this->repository = $repository;
     }
 
     public function index(Request $request, Response $response)
     {
-        return $response->send($this->service->all());
+        return $response->send($this->repository->all());
     }
 }
