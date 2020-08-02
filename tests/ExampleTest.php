@@ -9,6 +9,11 @@ class ExampleTest extends Test
 {
     public function testExample(): void
     {
-        $this->assertTrue(true);
+        $expect = [
+            'users' => []
+        ];
+        $response = (new Client())->get('http://localhost:8000/users');
+        $this->assertEquals(200, $response->getStatus());
+        $this->assertEquals($expect, (array) $response->json());
     }
 }
