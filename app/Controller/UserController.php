@@ -5,7 +5,6 @@ namespace App\Controller;
 use Accolon\Route\Request;
 use Accolon\Route\Response;
 use App\Repositories\IUserRepository;
-use App\Repositories\Izanami\UserRepositoryIzanami;
 
 class UserController
 {
@@ -18,6 +17,9 @@ class UserController
 
     public function index(Request $request, Response $response)
     {
+        return response()->json([
+            'users' => []
+        ]);
         return $response->send($this->repository->all());
     }
 }

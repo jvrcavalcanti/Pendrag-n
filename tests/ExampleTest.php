@@ -2,9 +2,10 @@
 
 namespace Tests;
 
-use PHPUnit\Framework\TestCase;
+use Accolon\Request\Client;
+use Pendragon\Framework\Testing\Test;
 
-class ExampleTest extends TestCase
+class ExampleTest extends Test
 {
     public function testExample(): void
     {
