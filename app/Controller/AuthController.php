@@ -8,13 +8,6 @@ use Pendragon\Framework\Util\Validator;
 
 class AuthController
 {
-    private IAuth $auth;
-
-    public function __construct(IAuth $auth)
-    {
-        $this->auth = $auth;
-    }
-
     public function register(Request $request)
     {
         Validator::request($request, [
@@ -23,7 +16,7 @@ class AuthController
         ]);
 
         return response()->json([
-            'token' => $this->auth->generate([
+            'token' => auth()->generate([
                 "user" => $request->get("user"),
                 "password" => $request->get("password")
             ])
