@@ -2,7 +2,7 @@
 
 namespace App\Model;
 
-use Accolon\DataLayer\Model;
+use Accolon\Izanami\Model;
 use Pendragon\Framework\Auth\HasApiToken;
 
 class User extends Model
@@ -10,4 +10,6 @@ class User extends Model
     use HasApiToken;
 
     protected string $table = "users";
+
+    protected array $sensitives = ['passwords'];
 }

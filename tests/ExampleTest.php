@@ -3,9 +3,9 @@
 namespace Tests;
 
 use Accolon\Request\Client;
-use Pendragon\Framework\Testing\Test;
+use Pendragon\Framework\Testing\TestService;
 
-class ExampleTest extends Test
+class ExampleTest extends TestService
 {
     public function testExample(): void
     {
