@@ -45,14 +45,19 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/",
-            "Console\\": "console/"
+            "Tests\\": "tests/"
         }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
-        "serve": "php -S localhost:8000 -t public",
-        "test": "./vendor/bin/phpunit tests"
+        "serve": [
+            "php7.4 -S localhost:8000 -t public"
+        ],
+        "test": "./vendor/bin/phpunit tests",
+        "post-create-project-cmd": [
+            "php -r \"copy('.env.example', '.env');\"",
+            "php cli config.key"
+        ]
     }
 }
