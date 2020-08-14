@@ -12,7 +12,7 @@ class ExampleTest extends TestService
         $expect = [
             'users' => []
         ];
-        $response = (new Client())->get('http://localhost:8000/users');
+        $response = $this->client->get('/users');
         $this->assertEquals(200, $response->getStatus());
         $this->assertEquals($expect, (array) $response->json());
     }

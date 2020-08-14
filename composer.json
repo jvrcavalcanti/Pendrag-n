@@ -53,21 +53,6 @@
     "prefer-stable": true,
     "scripts": {
         "serve": "php -S localhost:8000 -t public",
-
-        "migrate": "Console\\Migration::migrate",
-        "migrate.rollback": "Console\\Migration::rollback",
-        "migrate.refresh": "Console\\Migration::refresh",
-
-        "make.migration": "Console\\Make::migration",
-        "make.model": "Console\\Make::model",
-        "make.controller": "Console\\Make::controller",
-        "make.middleware": "Console\\Make::middleware",
-        "make.view": "Console\\Make::view",
-        "make.component": "Console\\Make::component",
-        "make.key": "Console\\Make::key",
-
-        "clear.images": "Console\\Clear::images",
-
         "test": "./vendor/bin/phpunit tests"
     }
 }
