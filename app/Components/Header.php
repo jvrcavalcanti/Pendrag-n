@@ -2,9 +2,15 @@
 
 namespace App\Components;
 
-use Accolon\Template\Component;
+use Accolon\ViewComponents\Component;
 
 class Header extends Component
 {
-    protected string $dir = "header";
+    public function render(): string
+    {
+        return <<<TEMPLATE
+        <header>
+        </header>
+        TEMPLATE;
+    }
 }

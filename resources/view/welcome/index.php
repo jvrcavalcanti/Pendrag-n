@@ -1,4 +1,4 @@
-<!-- <?php component("header"); ?> -->
+<!-- <?php component("Header"); ?> -->
 <main class="card-body container-fluid">
     <h1>Welcome the Pendragón Framework</h1>
     <hr/>
