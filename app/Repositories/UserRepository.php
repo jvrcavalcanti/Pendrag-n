@@ -1,11 +1,8 @@
 <?php
 
-namespace App\Repositories\Izanami;
+namespace App\Repositories;
 
-use App\Model\User;
-use App\Repositories\IUserRepository;
-
-class UserRepositoryIzanami implements IUserRepository
+class UserRepository
 {
     private User $user;
 

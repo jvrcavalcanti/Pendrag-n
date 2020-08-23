@@ -4,13 +4,13 @@ namespace App\Controller;
 
 use Accolon\Route\Request;
 use Accolon\Route\Response;
-use App\Repositories\IUserRepository;
+use App\Repositories\UserRepository;
 
 class UserController
 {
-    private IUserRepository $repository;
+    private UserRepository $repository;
 
-    public function __construct(IUserRepository $repository)
+    public function __construct(UserRepository $repository)
     {
         $this->repository = $repository;
     }

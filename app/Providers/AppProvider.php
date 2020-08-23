@@ -10,6 +10,6 @@ class AppProvider extends Provider
 {
     public function boot()
     {
-        app()->bind(IUserRepository::class, UserRepositoryIzanami::class);
+        //
     }
 }
