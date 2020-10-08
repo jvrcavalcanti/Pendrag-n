@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use Accolon\Route\Request;
-use Accolon\Route\Response;
 use App\Repositories\UserRepository;
 
 class UserController
@@ -15,11 +14,11 @@ class UserController
         $this->repository = $repository;
     }
 
-    public function index(Request $request, Response $response)
+    public function index(Request $request)
     {
         return response()->json([
             'users' => []
         ]);
-        return $response->send($this->repository->all());
+        return response()->send($this->repository->all());
     }
 }

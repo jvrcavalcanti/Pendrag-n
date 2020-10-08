@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use Accolon\Route\Request;
-use Pendragon\Framework\Auth\IAuth;
 use Pendragon\Framework\Util\Validator;
 
 class AuthController

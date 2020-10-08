@@ -2,6 +2,8 @@
 
 namespace App\Repositories;
 
+use App\Model\User;
+
 class UserRepository
 {
     private User $user;
