@@ -8,4 +8,4 @@ $router->get("/", fn() => view("welcome"));
 
 $router->get("/users", [UserController::class, 'index']);
 
-$router->post("/register", "AuthController->register");
+$router->post("/register", "App\Controller\AuthController->register");

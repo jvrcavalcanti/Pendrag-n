@@ -11,6 +11,6 @@ class AuthProvider extends Provider
 {
     public function register()
     {
-        app()->bind(IAuth::class, AuthJWT::class);
+        container()->bind(IAuth::class, AuthJWT::class);
     }
 }

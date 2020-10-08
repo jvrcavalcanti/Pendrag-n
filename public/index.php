@@ -4,7 +4,7 @@ require_once "../vendor/autoload.php";
 
 $router = new \Pendragon\Framework\App;
 
-// $router->registerMiddlewares(MIDDLEWARES);
+$router->registerMiddlewares(MIDDLEWARES);
 
 $router->registerProviders(PROVIDERS);
 
