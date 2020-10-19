@@ -2,14 +2,9 @@
 
 namespace App\Model;
 
-use Accolon\Izanami\Model;
-use Pendragon\Framework\Auth\HasApiToken;
+use Pendragon\Framework\Auth\Authenticatable;
 
-class User extends Model
+class User extends Authenticatable
 {
-    use HasApiToken;
-
-    protected string $table = "users";
-
     protected array $sensitives = ['password'];
 }
