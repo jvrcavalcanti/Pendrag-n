@@ -52,7 +52,7 @@
     "prefer-stable": true,
     "scripts": {
         "serve": [
-            "php7.4 -S localhost:8000 -t public"
+            "php -S localhost:8000 -t public"
         ],
         "test": "./vendor/bin/phpunit tests",
         "post-create-project-cmd": [
