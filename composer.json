@@ -57,6 +57,6 @@
         ]
     },
     "require": {
-        "pendragon/framework": "^3.2"
+        "pendragon/framework": "^3.3"
     }
 }

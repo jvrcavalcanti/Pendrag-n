@@ -1,15 +1,11 @@
 <?php
 
-define("START_TIME", microtime(true));
-
-use Pendragon\Framework\Console\Cli;
+use Accolon\Cli\Console;
 
 require_once __DIR__ . "/vendor/autoload.php";
 
-$cli = new Cli();
+Console::init();
 
-$cli->run();
+Console::addCommands(BASE_COMMANDS);
 
-echo "Runtime: " . number_format(
-    (microtime(true) - START_TIME), 4
-) . "ms\n";
+Console::run(env('APP_DEBUG'), $argv);
