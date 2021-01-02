@@ -8,8 +8,8 @@ $router->registerMiddlewares(MIDDLEWARES);
 
 $router->registerProviders(PROVIDERS);
 
-$router->bootProviders();
+require_once "../routes/web.php";
 
-require_once "../routes.php";
+$router->bootProviders();
 
 $router->dispatch();
