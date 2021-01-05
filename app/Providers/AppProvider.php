@@ -2,9 +2,7 @@
 
 namespace App\Providers;
 
-use App\Repositories\IUserRepository;
-use App\Repositories\Izanami\UserRepositoryIzanami;
-use Accolon\Route\Provider;
+use Pendragon\Framework\Provider;
 
 class AppProvider extends Provider
 {

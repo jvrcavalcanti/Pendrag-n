@@ -1,11 +1,11 @@
 <?php
 
-use Accolon\Cli\Console;
+use Pendragon\Framework\Console\Cli;
 
 require_once __DIR__ . "/vendor/autoload.php";
 
-Console::init();
+Cli::init();
 
-Console::addCommands(BASE_COMMANDS);
+Cli::addCommands(BASE_COMMANDS);
 
-Console::run(env('APP_DEBUG'), $argv);
+Cli::run(env('APP_DEBUG', false), $argv);

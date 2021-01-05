@@ -4,8 +4,7 @@ namespace App\Providers;
 
 use Pendragon\Framework\Auth\AuthJWT;
 use Pendragon\Framework\Auth\IAuth;
-use Pendragon\Framework\Auth\Authenticatable;
-use Accolon\Route\Provider;
+use Pendragon\Framework\Provider;
 
 class AuthProvider extends Provider
 {

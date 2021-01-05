@@ -33,10 +33,11 @@
         "files": [
             "config/bootstrap.php",
             "config/app.php",
-            "config/route.php",
+            "config/middleware.php",
             "config/view.php",
             "config/token.php",
-            "config/db.php"
+            "config/db.php",
+            "config/provider.php"
         ]
     },
     "autoload-dev": {
@@ -57,6 +58,6 @@
         ]
     },
     "require": {
-        "pendragon/framework": "^3.3"
+        "pendragon/framework": "^4.0"
     }
 }
