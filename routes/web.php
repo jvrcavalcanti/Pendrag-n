@@ -1,11 +1,7 @@
 <?php
 
-/** @var \Pendragon\Framework\App $router */
-
-use App\Controller\UserController;
+/** @var \Accolon\Route\Router $router */
 
 $router->get("/", fn() => view("welcome"));
-
-$router->get("/users", [UserController::class, 'index']);
 
 $router->post("/register", "App\Controller\AuthController->register");
