@@ -2,15 +2,15 @@
 
 $app = require '../bootstrap/app.php';
 
-$router = $app->getRouter();
+$router = app()->getRouter();
 
 $router->registerMiddlewares(MIDDLEWARES);
 
-require_once "../routes/web.php";
+$router->attributeRoutes('../app/Controller', 'App\\Controller');
 
-$router->prefix('api');
+$router->router(require_once "../routes/web.php");
 
-require_once '../routes/api.php';
+$router->router(require_once '../routes/api.php');
 
 $app->bootProviders();
 

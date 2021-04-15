@@ -2,16 +2,17 @@
 
 namespace App\Controller;
 
+use Accolon\Route\Controller;
 use Accolon\Route\Request;
-use App\Repositories\UserRepository;
+use App\Model\User;
 
-class UserController
+class UserController extends Controller
 {
-    private UserRepository $repository;
+    private User $user;
 
-    public function __construct(UserRepository $repository)
+    public function __construct(User $user)
     {
-        $this->repository = $repository;
+        $this->user = $user;
     }
 
     public function index(Request $request)
@@ -19,6 +20,6 @@ class UserController
         return response()->json([
             'users' => []
         ]);
-        return response()->send($this->repository->all());
+        return response()->send($this->user->all());
     }
 }

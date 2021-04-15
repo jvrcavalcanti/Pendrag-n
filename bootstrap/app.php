@@ -2,7 +2,7 @@
 
 require_once "../vendor/autoload.php";
 
-$app = new \Pendragon\Framework\App;
+$app = new \Pendragon\Framework\Application;
 
 container()->singletons(Accolon\Container\Container::class, new Accolon\Container\Container);
 

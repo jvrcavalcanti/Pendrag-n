@@ -2,16 +2,18 @@
 
 namespace App\Controller;
 
+use Accolon\Route\Attributes\Route;
+use Accolon\Route\Controller;
 use Accolon\Route\Request;
-use Pendragon\Framework\Util\Validator;
 
-class AuthController
+class AuthController extends Controller
 {
+    #[Route('/auth/register')]
     public function register(Request $request)
     {
-        Validator::request($request, [
-            "user" => "string",
-            "password" => "string"
+        $this->validate([
+            'user' => 'string',
+            'password' => 'string'
         ]);
 
         return response()->json([

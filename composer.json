@@ -49,7 +49,7 @@
     "prefer-stable": true,
     "scripts": {
         "serve": [
-            "php -S localhost:8000 -t public"
+            "php8.0 -S localhost:8000 -t public"
         ],
         "test": "./vendor/bin/phpunit tests",
         "post-create-project-cmd": [
@@ -58,6 +58,7 @@
         ]
     },
     "require": {
-        "pendragon/framework": "^4.0"
+        "php": "^8.0",
+        "pendragon/framework": "^5.0"
     }
 }

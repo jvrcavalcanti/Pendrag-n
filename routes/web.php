@@ -1,7 +1,9 @@
 <?php
 
-/** @var \Accolon\Route\Router $router */
+$router = app()->getRouter();
 
 $router->get("/", fn() => view("welcome"));
 
-$router->post("/register", "App\Controller\AuthController->register");
+return $router;
+
+// $router->post("/register", "App\Controller\AuthController->register");
