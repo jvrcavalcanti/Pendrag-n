@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controllers;
 
 use Accolon\Route\Controller;
 use Accolon\Route\Request;

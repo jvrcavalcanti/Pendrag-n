@@ -6,7 +6,7 @@ $router = app()->getRouter();
 
 $router->registerMiddlewares(MIDDLEWARES);
 
-$router->attributeRoutes('../app/Controller', 'App\\Controller');
+$router->attributeRoutes('../app/Controllers', 'App\\Controllers');
 
 $router->router(require_once "../routes/web.php");
 

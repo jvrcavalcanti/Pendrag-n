@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model;
+namespace App\Models;
 
 use Pendragon\Framework\Auth\Authenticatable;
 
